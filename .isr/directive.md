@@ -18,34 +18,15 @@ LLMs who need to know how to use, maintain, and enforce ISR.
 - Minimal updates — only modify what's necessary
 - Canonical language — ISR content in English for LLM performance
 
-## LLM Workflow
-```
-1. Start of session:
-   - Read _index.md → know all concepts
-   - Read root.md → understand project intent
-
-2. Before any action:
-   - Identify relevant nodes
-   - Load node + its direct relations
-   - Verify action aligns with Purpose, Principles, Boundaries
-   - If goals, concepts, or intentions are unclear → ask user to clarify BEFORE proceeding
-
-3. If aligned → proceed
-   If ambiguous → ask user for clarification
-   If misaligned → refuse and explain which principle is violated
-
-4. After action (if intent changed):
-   - Update affected nodes
-   - Update _index.md if new concept added
-   - Ensure bidirectional relations are maintained
-```
+## Protocols
+Actionable procedures are in `protocols/`. See `guide.md` for the routing table (which protocol applies when).
 
 ## Boundaries
 - Does: Define LLM behavior, validation rules, maintenance procedures
 - Does NOT: Define node structure (that's node's job)
 
 ## Relations
-- guide — directive provides detailed rules summarized in guide
+- guide — guide provides the protocol routing table
 - node — directive tells LLM how to work with nodes
 - root — directive references root as entry point
-- bootstrapping — directive differs for new vs existing projects
+- protocols/ — actionable procedures derived from these principles

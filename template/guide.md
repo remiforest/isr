@@ -5,36 +5,19 @@ Explain the ISR approach and tell LLMs exactly what to do when they encounter th
 
 ## Instructions for LLMs
 
-When you discover this `.isr/` folder, follow these steps:
-
-### If `root.md` is empty or contains only a template:
-This is a new or existing project that needs ISR initialization. Run the **bootstrapping process**:
-
-1. Analyze the codebase structure (folders, main files, entry points)
-2. Propose 10-15 key concepts you identify — ask user to validate
-3. Create `root.md` with the project's Purpose and Principles — ask user to validate
-4. Create a node for each validated concept
-5. Update `_index.md` with all nodes
-6. Identify and document relations between concepts
-7. Switch to normal mode (see below)
-
-**Important**: Never assume intent. Always ask the user to validate your understanding before creating nodes.
-
-### If `root.md` describes the project's intent:
-This project already has ISR. Use **normal mode**:
+When you discover this `.isr/` folder:
 
 1. Read `_index.md` — discover all concepts
 2. Read `root.md` — understand project intent
-3. Before any action:
-   - Load relevant nodes + their relations
-   - Verify alignment with Purpose, Principles, Boundaries
-   - If unclear → ask user BEFORE proceeding
-   - If aligned → proceed
-   - If misaligned → refuse and explain why
-4. After any action that changes intent:
-   - Update affected nodes
-   - Update `_index.md` if needed
-   - Maintain bidirectional relations
+3. Apply the appropriate protocol based on the situation:
+
+| Situation | Protocol |
+|---|---|
+| `.isr/` is empty or `root.md` has no intent | `protocols/bootstrap.md` |
+| About to write, modify, or delete code | `protocols/consult.md` |
+| A decision changed the project's intent | `protocols/update.md` |
+| Finishing a task, about to report done | `protocols/drift-check.md` |
+| User's intent is unclear or ambiguous | `protocols/clarify.md` |
 
 ## What is ISR?
 
@@ -89,6 +72,6 @@ Rules specific to this concept.
 ## Relations
 - root — the project's entry point after reading this guide
 - node — defines the structure explained here
-- directive — detailed LLM behavior rules
-- bootstrapping — detailed bootstrapping process
+- directive — LLM behavior principles
+- protocols/ — actionable procedures triggered by situation
 - _index.md — the navigation file

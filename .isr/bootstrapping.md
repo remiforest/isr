@@ -18,16 +18,7 @@ Developers applying ISR to brownfield projects.
 - Imperfect is OK — bootstrapped ISR will need refinement
 
 ## Process
-```
-1. Analyze codebase structure (folders, main files, entry points)
-2. Propose initial concepts (10-15 most important)
-3. User validates or corrects
-4. Create root.md with project Purpose and Principles
-5. Create nodes for validated concepts
-6. Build _index.md
-7. Identify relations between concepts
-8. Switch to normal directive mode
-```
+See `protocols/bootstrap.md` for the step-by-step procedure.
 
 ## Boundaries
 - Does: Extract intent, propose structure, ask for validation

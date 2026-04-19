@@ -22,16 +22,23 @@ A `.isr/` folder containing a **graph of intention nodes**:
 ```
 isr/
 ├── README.md           # This file
+├── AGENTS.md           # Entry point for any coding agent
 ├── CONTRIBUTING.md     # How to contribute
 ├── template/           # Files to copy into your project
 │   ├── _index.md       # Navigation (customize)
 │   ├── root.md         # Project intent (customize)
-│   ├── guide.md        # ISR approach explanation
+│   ├── guide.md        # ISR approach + protocol routing
 │   ├── node.md         # Node definition
 │   ├── index.md        # Index definition
 │   ├── relation.md     # Relation definition
-│   ├── directive.md    # LLM behavior rules
-│   └── bootstrapping.md # Protocol for existing projects
+│   ├── directive.md    # LLM behavior principles
+│   ├── bootstrapping.md # Bootstrapping concept
+│   └── protocols/      # Actionable LLM procedures
+│       ├── consult.md
+│       ├── update.md
+│       ├── bootstrap.md
+│       ├── drift-check.md
+│       └── clarify.md
 └── .isr/               # ISR of this project (meta example)
 ```
 
@@ -97,23 +104,17 @@ Rules for this concept.
 ```
 1. Start of session:
    - Read _index.md → know all concepts
-   - Read guide.md → understand ISR approach
+   - Read guide.md → understand ISR approach + protocol routing
    - Read root.md → understand project intent
 
-2. Before any action:
-   - Identify relevant nodes
-   - Load node + its direct relations
-   - Verify action aligns with Purpose, Principles, Boundaries
+2. Match the situation to a protocol:
+   - Empty ISR?          → protocols/bootstrap.md
+   - About to code?      → protocols/consult.md
+   - Intent changed?     → protocols/update.md
+   - Task finishing?     → protocols/drift-check.md
+   - Ambiguous intent?   → protocols/clarify.md
 
-3. Decision:
-   - If aligned → proceed
-   - If ambiguous → ask user
-   - If misaligned → refuse and explain
-
-4. After action (if intent changed):
-   - Update affected nodes
-   - Update _index.md if needed
-   - Maintain bidirectional relations
+3. Follow the protocol steps
 ```
 
 ## Meta Note

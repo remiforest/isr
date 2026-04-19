@@ -29,6 +29,7 @@ Future sessions that need to understand why ISR is designed this way.
 | 2024-12-05 | Index as simple mapping | Just discovery, no duplication of content |
 | 2024-12-05 | Prevention over detection | LLM validates before acting, not audits after |
 | 2024-12-05 | Intent over implementation | ISR is not a spec or documentation, it's a reasoning framework |
+| 2026-04-19 | Decompose directive into protocols | Monolithic directive mixed all LLM behaviors; protocols allow targeted loading, independent evolution, and clear triggers. Protocols live in protocols/ subdirectory to distinguish them from concept nodes |
 
 ## Boundaries
 - Does: Record decisions about ISR design

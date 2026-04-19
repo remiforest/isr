@@ -10,3 +10,8 @@
 | directive | directive.md |
 | bootstrapping | bootstrapping.md |
 | decision-log | decision-log.md |
+| protocol: consult | protocols/consult.md |
+| protocol: update | protocols/update.md |
+| protocol: bootstrap | protocols/bootstrap.md |
+| protocol: drift-check | protocols/drift-check.md |
+| protocol: clarify | protocols/clarify.md |
