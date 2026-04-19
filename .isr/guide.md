@@ -1,7 +1,40 @@
 # Guide
 
 ## Purpose
-Explain the ISR approach to anyone discovering this folder.
+Explain the ISR approach and tell LLMs exactly what to do when they encounter this folder.
+
+## Instructions for LLMs
+
+When you discover this `.isr/` folder, follow these steps:
+
+### If `root.md` is empty or contains only a template:
+This is a new or existing project that needs ISR initialization. Run the **bootstrapping process**:
+
+1. Analyze the codebase structure (folders, main files, entry points)
+2. Propose 10-15 key concepts you identify — ask user to validate
+3. Create `root.md` with the project's Purpose and Principles — ask user to validate
+4. Create a node for each validated concept
+5. Update `_index.md` with all nodes
+6. Identify and document relations between concepts
+7. Switch to normal mode (see below)
+
+**Important**: Never assume intent. Always ask the user to validate your understanding before creating nodes.
+
+### If `root.md` describes the project's intent:
+This project already has ISR. Use **normal mode**:
+
+1. Read `_index.md` — discover all concepts
+2. Read `root.md` — understand project intent
+3. Before any action:
+   - Load relevant nodes + their relations
+   - Verify alignment with Purpose, Principles, Boundaries
+   - If unclear → ask user BEFORE proceeding
+   - If aligned → proceed
+   - If misaligned → refuse and explain why
+4. After any action that changes intent:
+   - Update affected nodes
+   - Update `_index.md` if needed
+   - Maintain bidirectional relations
 
 ## What is ISR?
 
@@ -10,28 +43,6 @@ ISR (Intentional Software Representation) captures the **intention** behind a so
 ## Core Idea
 
 One concept = one file (a **node**). Nodes link to each other through **relations**, forming a flat graph of intentions. No hierarchy, no implementation details, no code references.
-
-## How to Use This Folder
-
-### Starting a Session
-1. Read `_index.md` — discover all concepts
-2. Read `root.md` — understand the project's core intent
-3. Load relevant nodes based on the task at hand
-
-### Before Any Action
-1. Identify which nodes are relevant
-2. Load the node + its direct relations
-3. Verify the action aligns with Purpose, Principles, Boundaries
-4. If goals, concepts, or intentions are unclear → ask user to clarify BEFORE proceeding
-5. If aligned → proceed
-6. If ambiguous → ask user for clarification
-7. If misaligned → refuse and explain why
-
-### Maintaining ISR
-- Update affected nodes when intent changes
-- Add new nodes for new concepts
-- Keep `_index.md` in sync
-- Maintain bidirectional relations
 
 ## Node Structure
 
@@ -72,11 +83,12 @@ Rules specific to this concept.
 - **English canonical content** — for LLM performance
 
 ## Boundaries
-- Does: Explain the ISR approach and how to use it
+- Does: Explain ISR and instruct LLMs on what to do
 - Does NOT: Define the project's intent (that's root's job)
 
 ## Relations
 - root — the project's entry point after reading this guide
 - node — defines the structure explained here
 - directive — detailed LLM behavior rules
-- _index.md — the navigation file mentioned here
+- bootstrapping — detailed bootstrapping process
+- _index.md — the navigation file
