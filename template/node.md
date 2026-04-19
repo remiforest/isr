@@ -18,21 +18,13 @@ Both humans and LLMs who need to understand a specific concept.
 - Flat storage — all nodes at same directory level (no nested folders)
 
 ## Structure
-Every node contains:
+
+### Common core (all nodes)
 ```markdown
-# [Concept Name]
+# [Name]
 
 ## Purpose
-[Why this exists — one sentence]
-
-## Serves
-[Who/what benefits from this]
-
-## Enables
-[What becomes possible because of this]
-
-## Principles
-[Rules specific to this concept]
+Why this exists — one sentence.
 
 ## Boundaries
 - Does: [responsibilities]
@@ -40,6 +32,59 @@ Every node contains:
 
 ## Relations
 - other_concept — nature of the link
+```
+
+### Common optional (most nodes)
+```markdown
+## Serves
+Who or what benefits from this.
+
+## Enables
+What becomes possible because of this.
+
+## Principles
+Rules specific to this concept.
+```
+
+### Type-specific sections
+
+**Invariant** — a rule that must always hold:
+```markdown
+## Statement
+The rule in plain language.
+
+## Applies to
+Which concepts this rule constrains.
+
+## Verified by
+How this is checked (test reference, or "semantic").
+```
+
+**Workflow** — a sequence of actions:
+```markdown
+## Trigger
+What initiates this workflow.
+
+## Steps
+Ordered sequence of actions.
+
+## Involves
+Which concepts participate.
+```
+
+**Decision** — an architectural choice:
+```markdown
+## Context
+What prompted this decision.
+
+## Decision
+What was decided.
+
+## Consequences
+What follows from this choice.
+
+## Status
+Active | Superseded by [ref]
 ```
 
 ## Boundaries

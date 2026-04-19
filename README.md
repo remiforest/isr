@@ -61,24 +61,15 @@ To implement ISR on a project, read the `.isr/` files in this order:
 
 Then follow the directive to build the project's ISR.
 
-## Node Template
+## Node Structure
 
-Every node follows this structure:
+Every node has a common core:
 
 ```markdown
-# [Concept Name]
+# [Name]
 
 ## Purpose
 Why this exists — one sentence.
-
-## Serves
-Who or what benefits.
-
-## Enables
-What becomes possible.
-
-## Principles
-Rules for this concept.
 
 ## Boundaries
 - Does: [responsibilities]
@@ -87,6 +78,13 @@ Rules for this concept.
 ## Relations
 - other_concept — nature of the link
 ```
+
+Most nodes also include `Serves`, `Enables`, and `Principles` sections. Some types add specialized sections — see `node.md` for details:
+
+- **Concept** (default) — entities, modules, services
+- **Invariant** — rules that must hold (Statement, Applies to, Verified by)
+- **Workflow** — action sequences (Trigger, Steps, Involves)
+- **Decision** — architectural choices (Context, Decision, Consequences, Status)
 
 ## Key Principles
 

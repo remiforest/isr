@@ -29,30 +29,14 @@ One concept = one file (a **node**). Nodes link to each other through **relation
 
 ## Node Structure
 
-Every node follows this template:
+Every node has a common core (Purpose, Boundaries, Relations) and may include optional sections (Serves, Enables, Principles). Some types add specialized sections:
 
-```markdown
-# [Concept Name]
+- **Concept** (default): full common core + optional sections
+- **Invariant**: adds Statement, Applies to, Verified by
+- **Workflow**: adds Trigger, Steps, Involves
+- **Decision**: adds Context, Decision, Consequences, Status
 
-## Purpose
-Why this exists — one sentence.
-
-## Serves
-Who or what benefits from this.
-
-## Enables
-What becomes possible because of this.
-
-## Principles
-Rules specific to this concept.
-
-## Boundaries
-- Does: [responsibilities]
-- Does NOT: [anti-responsibilities]
-
-## Relations
-- other_concept — nature of the link
-```
+See `node.md` for the full schema of each type.
 
 ## Key Principles
 

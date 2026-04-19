@@ -30,6 +30,7 @@ Future sessions that need to understand why ISR is designed this way.
 | 2024-12-05 | Prevention over detection | LLM validates before acting, not audits after |
 | 2024-12-05 | Intent over implementation | ISR is not a spec or documentation, it's a reasoning framework |
 | 2026-04-19 | Decompose directive into protocols | Monolithic directive mixed all LLM behaviors; protocols allow targeted loading, independent evolution, and clear triggers. Protocols live in protocols/ subdirectory to distinguish them from concept nodes |
+| 2026-04-19 | Schema flexibility — common core + type-specific sections | Uniform schema forced invariants, workflows, and decisions into ill-fitting shapes. Common core (Purpose, Boundaries, Relations) keeps consistency; type-specific sections (Statement, Trigger, Context...) give each type its natural form. Index gains a Type column for triage before loading |
 
 ## Boundaries
 - Does: Record decisions about ISR design

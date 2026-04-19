@@ -20,11 +20,15 @@ LLMs starting a session who need to discover the project's structure.
 ```markdown
 # ISR Index — [Project Name]
 
-| Concept | File |
-|---------|------|
-| concept_a | concept_a.md |
-| concept_b | concept_b.md |
+| Concept | Type | File |
+|---------|------|------|
+| concept_a | concept | concept_a.md |
+| rule_x | invariant | rule_x.md |
+| checkout | workflow | checkout.md |
+| chose_postgres | decision | chose_postgres.md |
 ```
+
+Types: `concept` (default), `invariant`, `workflow`, `decision`, `protocol`
 
 ## Boundaries
 - Does: Map concepts to files
