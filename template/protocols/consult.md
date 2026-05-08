@@ -11,9 +11,10 @@ Before writing, modifying, or deleting code.
    - Does the change respect each node's **Purpose** and **Principles**?
    - Does it stay within **Boundaries** (Does / Does NOT)?
    - Does it preserve existing **Relations**?
-5. If aligned → proceed
-6. If ambiguous → apply `protocols/clarify.md`
-7. If misaligned → refuse, explain which principle is violated
+5. If no relevant node covers this work → flag the gap, apply `protocols/clarify.md`
+6. If aligned → proceed
+7. If ambiguous → apply `protocols/clarify.md`
+8. If misaligned → refuse, explain which principle is violated
 
 ## Boundaries
 - Does: Validate planned actions against ISR before execution
